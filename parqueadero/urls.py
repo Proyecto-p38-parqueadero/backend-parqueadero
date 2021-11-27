@@ -3,8 +3,10 @@ from django.urls import include
 from parqueadero.views.parkingView import ParkingCreateView, ParkingListView,ParkingDetailView, ParkingUpdateView, ParkingDeleteView
 
 
+
 urlpatterns = [
-    
+ 
+      
     path("parking/create/", ParkingCreateView.as_view()),
     path("parking/list/", ParkingListView.as_view()),
     path("parking/<int:pk>/", ParkingDetailView.as_view()),
