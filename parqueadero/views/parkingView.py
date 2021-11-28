@@ -9,6 +9,12 @@ class ParkingCreateView(generics.CreateAPIView):
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
 
+class ParkingListView(generics.ListAPIView):
+    queryset = Parking.objects.all()
+    serializer_class = ParkingSerializer
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
 class ParkingDetailView(generics.RetrieveAPIView):
     queryset         = Parking.objects.all()
     serializer_class = ParkingSerializer
